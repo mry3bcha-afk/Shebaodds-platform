@@ -1,0 +1,6 @@
+{
+  "name": "ShebaOdds",
+  "description": "An enterprise-standard sports betting application featuring real-time odds, a secure payment gateway flow, and a gorgeous Material 3 responsive dark theme featuring ShebaOdds branding.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
