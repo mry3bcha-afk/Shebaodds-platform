@@ -1,0 +1,715 @@
+/* ========================================================
+   SHEBAODDS THEME CSS STYLESHEET
+   Specific Component Classes for Black/Gold Styling Matrix
+   ======================================================== */
+
+:root {
+  --bg-black: #050b18;
+  --bg-dark-card: #111625;
+  --gold-accent: #ffd700;
+  --gold-hover: #e6c200;
+  --text-white: #ffffff;
+  --text-muted: #94a3b8;
+  --border-dark: #1e293b;
+  --neon-green: #10b981;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  background-color: #0b0f19;
+  border-right: 1px solid var(--border-dark);
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+.sidebar-header {
+  padding: 24px;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--text-white);
+}
+
+.tagline {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--gold-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+  background-color: var(--bg-dark-card);
+  color: var(--gold-accent);
+}
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid var(--border-dark);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  color: var(--bg-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.vip-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  background: rgba(255, 215, 0, 0.1);
+  color: var(--gold-accent);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.logout-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--border-dark);
+  color: var(--text-muted);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 60;
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  color: var(--gold-accent);
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+}
+
+/* Top Bar Component */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: var(--bg-dark-card);
+  border-bottom: 1px solid var(--border-dark);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.time-display {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.search-bar {
+  display: flex;
+  max-width: 450px;
+  width: 100%;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  background: var(--bg-black);
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: var(--text-white);
+  outline: none;
+  font-size: 0.85rem;
+}
+
+.search-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--gold-accent);
+  cursor: pointer;
+}
+
+.top-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle, .language-toggle {
+  background: var(--bg-black);
+  border: 1px solid var(--border-dark);
+  color: var(--text-white);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.wallet-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-black);
+  border: 1px solid var(--border-dark);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.wallet-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.wallet-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.wallet-balance {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--neon-green);
+}
+
+/* Home Page styling */
+.hero-banner {
+  background: linear-gradient(135deg, #111625 0%, #050b18 100%);
+  border: 1px solid var(--border-dark);
+  border-radius: 16px;
+  padding: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+  color: var(--text-white);
+}
+
+.hero-content p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.btn-gold-large {
+  display: inline-block;
+  background: var(--gold-accent);
+  color: var(--bg-black);
+  text-decoration: none;
+  font-weight: 800;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-gold-large:hover {
+  background: var(--gold-hover);
+  transform: translateY(-2px);
+}
+
+.hero-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-stats .stat {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.hero-stats .stat span {
+  color: var(--gold-accent);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+/* Matches Grid */
+.section {
+  margin-bottom: 32px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-white);
+}
+
+.view-all {
+  color: var(--gold-accent);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.match-card {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.match-league {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold-accent);
+  text-transform: uppercase;
+}
+
+.match-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.match-teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.team-name {
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.vs {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 800;
+}
+
+.match-odds {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.odds-btn {
+  background: var(--bg-black);
+  border: 1px solid var(--border-dark);
+  border-radius: 6px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.odds-btn:hover {
+  border-color: var(--gold-accent);
+}
+
+.odds-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.odds-value {
+  font-weight: 700;
+  color: var(--gold-accent);
+}
+
+.match-extra-odds {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.match-extra-odds button {
+  background: transparent;
+  border: 1px dashed var(--border-dark);
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.match-extra-odds button:hover {
+  color: var(--text-white);
+  border-color: var(--text-muted);
+}
+
+/* Bet Slip Component Styles */
+.bet-slip {
+  position: fixed;
+  right: -360px;
+  top: 0;
+  bottom: 0;
+  width: 360px;
+  background: var(--bg-dark-card);
+  border-left: 1px solid var(--border-dark);
+  z-index: 100;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.bet-slip.open {
+  right: 0;
+}
+
+.bet-slip-toggle {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  background: var(--gold-accent);
+  color: var(--bg-black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  z-index: 90;
+}
+
+.bet-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: var(--text-white);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 3px 6px;
+  border-radius: 10px;
+}
+
+/* ========================================================
+   CASINO GAMES PAGE (demo shells)
+   ======================================================== */
+.casino-hero { padding: 24px 4px 8px; }
+.casino-hero h1 { color: var(--gold-accent); font-size: 1.8rem; margin: 0 0 6px; }
+.casino-hero-sub { color: var(--text-muted); margin: 0 0 12px; }
+.demo-banner {
+  display: inline-block;
+  background: rgba(255, 179, 0, 0.12);
+  border: 1px solid var(--gold-accent);
+  color: var(--gold-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+.casino-toolbar { display: flex; flex-direction: column; gap: 12px; margin: 16px 0 20px; }
+.casino-search {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  color: var(--text-white);
+  padding: 10px 14px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 360px;
+}
+.casino-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.casino-tab {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  color: var(--text-muted);
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.casino-tab.active { background: var(--gold-accent); color: var(--bg-black); border-color: var(--gold-accent); }
+.casino-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+.casino-card {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.casino-card-thumb {
+  position: relative;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.casino-card-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 2px 8px;
+  background: rgba(0,0,0,0.5);
+}
+.casino-card-icon { font-size: 2.2rem; opacity: 0.85; }
+.casino-card-body { padding: 12px; }
+.casino-card-name { color: var(--text-white); font-weight: 700; font-size: 0.9rem; margin-bottom: 2px; }
+.casino-card-meta { color: var(--text-muted); font-size: 0.75rem; margin-bottom: 10px; }
+.casino-card-play {
+  width: 100%;
+  background: var(--gold-accent);
+  color: var(--bg-black);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+.demo-modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+  display: flex; align-items: center; justify-content: center; z-index: 200;
+}
+.demo-modal {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--gold-accent);
+  border-radius: 14px;
+  padding: 20px;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+}
+.demo-modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.demo-modal-header h3 { color: var(--gold-accent); margin: 0; }
+.demo-modal-tag { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 16px; }
+.demo-reels { display: flex; justify-content: center; gap: 10px; margin-bottom: 14px; }
+.demo-reel {
+  width: 60px; height: 60px; border-radius: 10px;
+  background: var(--bg-black); border: 1px solid var(--border-dark);
+  display: flex; align-items: center; justify-content: center; font-size: 1.8rem;
+}
+.demo-result { font-weight: 700; margin-bottom: 14px; }
+.demo-result.win { color: var(--neon-green); }
+.demo-result.lose { color: var(--text-muted); }
+.demo-spin-btn {
+  background: var(--gold-accent); color: var(--bg-black); border: none;
+  border-radius: 8px; padding: 10px 24px; font-weight: 800; cursor: pointer;
+}
+
+/* ========================================================
+   ADMIN: DEPOSIT / WITHDRAWAL TICKET REVIEW (demo)
+   ======================================================== */
+.admin-deposit-review { padding: 8px 4px 32px; }
+.demo-banner-strip {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.admin-deposit-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.admin-deposit-header h2 { color: var(--gold-accent); margin: 0; }
+.pending-pill {
+  background: var(--bg-dark-card); border: 1px solid var(--border-dark);
+  color: var(--text-white); padding: 4px 12px; border-radius: 14px; font-size: 0.8rem; font-weight: 700;
+}
+.admin-review-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.admin-review-table th {
+  text-align: left; color: var(--text-muted); font-weight: 600;
+  padding: 10px 8px; border-bottom: 1px solid var(--border-dark);
+}
+.admin-review-table td { padding: 8px; border-bottom: 1px solid var(--border-dark); color: var(--text-white); vertical-align: middle; }
+.admin-review-table input {
+  background: var(--bg-black); border: 1px solid var(--border-dark); color: var(--text-white);
+  padding: 6px 8px; border-radius: 6px; width: 120px; font-size: 0.8rem;
+}
+.type-deposit { color: var(--neon-green); font-weight: 700; }
+.type-withdrawal { color: #f97316; font-weight: 700; }
+.match-badge { font-size: 0.72rem; font-weight: 800; padding: 3px 10px; border-radius: 10px; }
+.match-badge.match { background: rgba(16,185,129,0.15); color: var(--neon-green); }
+.match-badge.mismatch { background: rgba(239,68,68,0.15); color: #f87171; }
+.match-badge.partial { background: rgba(148,163,184,0.15); color: var(--text-muted); }
+.match-badge.idle { color: var(--text-muted); }
+.match-badge.done { background: rgba(255,215,0,0.15); color: var(--gold-accent); text-transform: capitalize; }
+.action-cell { display: flex; gap: 6px; }
+.approve-btn, .reject-btn {
+  border: none; border-radius: 6px; padding: 6px 10px; font-weight: 700; cursor: pointer; font-size: 0.78rem;
+}
+.approve-btn { background: var(--neon-green); color: #04150c; }
+.reject-btn { background: #ef4444; color: #fff; }
+.approve-btn:disabled, .reject-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.admin-review-log { margin-top: 24px; background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-radius: 10px; padding: 14px; }
+.admin-review-log h4 { color: var(--gold-accent); margin: 0 0 8px; font-size: 0.85rem; }
+.admin-review-log ul { margin: 0; padding-left: 18px; color: var(--text-muted); font-size: 0.8rem; }
+.admin-review-log li { margin-bottom: 4px; }
+
+/* ========================================================
+   WALLET PAGE (demo deposit/withdraw ticket submission)
+   ======================================================== */
+.wallet-page { padding: 8px 4px 32px; max-width: 480px; }
+.wallet-tabs { display: flex; gap: 8px; margin: 16px 0; }
+.wallet-form { background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 10px; }
+.wallet-form-hint { color: var(--text-muted); font-size: 0.85rem; margin: 0 0 6px; }
+.wallet-form label { color: var(--text-white); font-size: 0.8rem; font-weight: 600; }
+.wallet-form input {
+  background: var(--bg-black); border: 1px solid var(--border-dark); color: var(--text-white);
+  padding: 10px 12px; border-radius: 8px; font-size: 0.9rem;
+}
+.wallet-submit-btn {
+  margin-top: 8px; background: var(--gold-accent); color: var(--bg-black); border: none;
+  border-radius: 8px; padding: 10px; font-weight: 800; cursor: pointer;
+}
+.wallet-submitted-note { margin-top: 14px; color: var(--neon-green); font-size: 0.85rem; font-weight: 600; }
+.admin-deposit-subnote { color: var(--text-muted); font-size: 0.8rem; margin: -8px 0 14px; }

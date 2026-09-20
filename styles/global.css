@@ -1,0 +1,112 @@
+/* ========================================================
+   SHEBAODDS GLOBAL CSS STYLESHEET
+   Professional Gaming Layout | 85% Black & 15% Gold Theme
+   ======================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #050b18;
+  color: #f1f5f9;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* App Core Structure */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 260px; /* Width of the sidebar */
+  transition: margin-left 0.3s ease;
+}
+
+.page-container {
+  flex: 1;
+  padding: 24px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* Global Buttons & Components */
+.btn-primary {
+  background: #ffd700;
+  color: #050b18;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #e6c200;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #ffd700;
+  border: 1px solid #ffd700;
+  border-radius: 8px;
+  padding: 9px 19px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  background: #111625;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  color: #ffd700;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050b18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd700;
+}
