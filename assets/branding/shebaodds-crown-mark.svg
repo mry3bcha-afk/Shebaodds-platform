@@ -1,0 +1,20 @@
+<svg width="40" height="40" viewBox="0 0 148 94" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SHEBAODDS crown mark">
+  <defs>
+    <linearGradient id="crownGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE28A"/>
+      <stop offset="45%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#B8790C"/>
+    </linearGradient>
+    <linearGradient id="bandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFD873"/>
+      <stop offset="100%" stop-color="#E29B0E"/>
+    </linearGradient>
+  </defs>
+  <path d="M0 40 L0 78 Q74 92 148 78 L148 40 L112 62 L86 14 L74 34 L62 14 L36 62 Z"
+        fill="url(#crownGrad)" stroke="#7A5206" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="0" y="78" width="148" height="16" rx="3" fill="url(#bandGrad)" stroke="#7A5206" stroke-width="1.5"/>
+  <circle cx="0" cy="40" r="7" fill="#FFF3D0" stroke="#7A5206" stroke-width="1.5"/>
+  <circle cx="74" cy="14" r="8" fill="#FFF3D0" stroke="#7A5206" stroke-width="1.5"/>
+  <circle cx="148" cy="40" r="7" fill="#FFF3D0" stroke="#7A5206" stroke-width="1.5"/>
+  <circle cx="74" cy="86" r="5" fill="#8B1E2B" stroke="#5C1019" stroke-width="1"/>
+</svg>

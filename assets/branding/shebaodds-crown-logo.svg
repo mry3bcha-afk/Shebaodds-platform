@@ -1,0 +1,35 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SHEBAODDS crown logo">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE28A"/>
+      <stop offset="45%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#B8790C"/>
+    </linearGradient>
+    <linearGradient id="goldGradSoft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFD873"/>
+      <stop offset="100%" stop-color="#E29B0E"/>
+    </linearGradient>
+    <radialGradient id="bgGlow" cx="50%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+  </defs>
+
+  <circle cx="120" cy="120" r="118" fill="url(#bgGlow)" stroke="url(#goldGrad)" stroke-width="2.5"/>
+
+  <!-- Crown -->
+  <g transform="translate(46,72)">
+    <path d="M0 40 L0 78 Q74 92 148 78 L148 40 L112 62 L86 14 L74 34 L62 14 L36 62 Z"
+          fill="url(#goldGrad)" stroke="#7A5206" stroke-width="1.5" stroke-linejoin="round"/>
+    <!-- crown base band -->
+    <rect x="0" y="78" width="148" height="16" rx="3" fill="url(#goldGradSoft)" stroke="#7A5206" stroke-width="1.5"/>
+    <!-- jewels -->
+    <circle cx="0" cy="40" r="7" fill="#FFF3D0" stroke="#7A5206" stroke-width="1.5"/>
+    <circle cx="74" cy="14" r="8" fill="#FFF3D0" stroke="#7A5206" stroke-width="1.5"/>
+    <circle cx="148" cy="40" r="7" fill="#FFF3D0" stroke="#7A5206" stroke-width="1.5"/>
+    <circle cx="74" cy="86" r="5" fill="#8B1E2B" stroke="#5C1019" stroke-width="1"/>
+  </g>
+
+  <text x="120" y="196" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="30" letter-spacing="2" fill="url(#goldGrad)">SHEBAODDS</text>
+  <text x="120" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-weight="500" font-size="11" letter-spacing="3" fill="#C9C9C9">SMART BETS. REAL WINS.</text>
+</svg>
